@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>kultkod — Интерактивные эссе</title>
+
+  <meta
+    name="description"
+    content="Женя / kultkod. Исследую интересные мне вещи и придумываю формы, в которых о них можно рассказать — через текст, данные, код и интерфейсы."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./styles.css" />
+
+
+</head>
+
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+
+  <div class="page">
+
+    <header class="topbar">
+      <div class="topbar__row">
+
+        <a class="brand" href="./" aria-label="На главную">
+          <span class="brand__name">kultkod</span>
+        </a>
+
+        <nav class="nav" aria-label="Навигация">
+          <a href="#works">Проекты</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+
+      </div>
+
+      <div class="rule" aria-hidden="true"></div>
+    </header>
+
+
+    <main id="content">
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Вступление">
+
+        <h1 class="hero__title">
+          Интерактивные эссе
+        </h1>
+
+        <p class="hero__lead">
+          Привет, меня зовут
+          <span class="areas">
+            <button
+              class="areas__trigger"
+              type="button"
+              aria-describedby="contact-tooltip"
+            >Женя</button><span
+              class="areas__tooltip"
+              id="areas-tooltip"
+              role="tooltip"
+            >
+              <span><a
+            href="https://t.me/chbchk"
+            target="_blank"
+            rel="noreferrer"
+          >Telegram</a></span>
+              <span><a
+            href="mailto:dunenkov.evgeniy@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >Почта</a></span></span></span>.
+          Я исследую интересные вещи
+          <span class="areas">
+            <button
+              class="areas__trigger"
+              type="button"
+              aria-describedby="areas-tooltip"
+            >в разных областях</button><span
+              class="areas__tooltip"
+              id="areas-tooltip"
+              role="tooltip"
+            >
+              <span>язык</span>
+              <span>литература</span>
+              <span>финансы</span>
+              <span>статистика</span>
+              <span>интерфейсы</span>
+              <span>визуализация данных</span>
+              <span>музыка</span>
+            </span>
+          </span> и рассказываю о них с помощью текста, данных и кода.
+        </p>
+
+      </section>
+
+
+      <!-- PROJECTS -->
+      <section id="works" class="works" aria-label="Проекты">
+
+        <div class="section-header">
+          <span>ПРОЕКТЫ</span>
+        </div>
+
+
+        <!-- TEXT DYNAMICS -->
+        <article class="project">
+
+          <div class="project-layout">
+
+          <div class="project-media project-media--interactive">
+
+            <button
+              class="td-preview"
+              type="button"
+              aria-label="Показать изменение текста с 1836 по 1842 год"
+            >
+
+              <!-- TEXT -->
+
+              <div class="td-preview__text">
+
+                <p class="td-preview__state td-preview__state--before">
+                  Завтрак был у вас хорош.
+                </p>
+
+                <p class="td-preview__state td-preview__state--after">
+                  Завтрак
+                  <span class="td-preview__removed">был</span>
+                  у вас,
+                  <span class="td-preview__added">господа,</span>
+                  хорош<span class="td-preview__removed">.</span><span class="td-preview__added">...</span>
+                  <span class="td-preview__added">Лабардан!</span>
+                </p>
+
+              </div>
+
+
+              <!-- YEAR -->
+
+              <div class="td-preview__year" aria-hidden="true">
+
+                <span class="td-preview__year-before">
+                  1836
+                </span>
+
+                <span class="td-preview__year-after">
+                  1842
+                </span>
+
+              </div>
+
+            </button>
+
+          </div>
+
+            <div class="project-content">
+
+              <h2 class="project-title">
+                Текст в динамике
+              </h2>
+
+              <p class="project-desc">
+                Попытка представить литературное произведение как рабочий процесс. Показать, как слова, фразы и целые фрагменты появляются, меняются и исчезают от версии к версии.
+              </p>
+
+              <p class="project-tech">
+                Визуализация на фронтенде (JS)
+                <span class="dot">·</span>
+                Формат <span class="mono">TDJ</span>
+                <span class="dot">·</span>
+                Утилита <span class="mono">TDJ Builder</span> (Python)
+              </p>
+
+              <div class="project-links">
+
+                <a href="./text-dynamics.html">
+                  О проекте
+                </a>
+
+                <span class="dot">·</span>
+
+                <a href="./text-dynamics/">
+                  Смотреть демо ↗
+                </a>
+
+                <span class="dot">·</span>
+
+                <a
+                  href="https://github.com/zhenyacode/text-dynamics"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- ACROSTICS -->
+        <article class="project">
+
+          <div class="project-layout">
+
+          <div class="project-media project-media--interactive">
+
+            <button
+              class="acro-preview"
+              type="button"
+              aria-label="Показать первые буквы слов"
+            >
+
+              <p class="acro-preview__text">
+
+                <span class="acro-preview__word"><span class="acro-preview__first">Р</span>ысистая</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>зда</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">ш</span>агом</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">и</span>ли</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">т</span>русцой</span>
+                –
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>сть</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">л</span>едяное</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">н</span>епоколебимое</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">о</span>бщественное</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">н</span>астроение</span>…
+
+                <span class="acro-preview__word"><span class="acro-preview__first">И</span></span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">о</span>х</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">ч</span>тобы</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>го</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">м</span>илое</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">п</span>ошевелить</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">и</span>ли</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">с</span>бить</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">а</span>дская</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">т</span>вердость</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">н</span>ужна</span>,
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>два</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">л</span>и</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">з</span>автра</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">я</span>виться</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">п</span>редсказуемая</span>!
+
+              </p>
+
+            </button>
+
+          </div>
+
+            <div class="project-content">
+
+              <h2 class="project-title">
+                Поиск акростихов
+              </h2>
+
+              <p class="project-desc">
+                Акростих — это зашифрованное послание, в котором первые буквы строк или предложений складываются в отдельные слова или фразы. Можно ли находить такие послания автоматически?
+              </p>
+
+              <p class="project-tech">
+                Утилита Acrofinder (Python)
+                <span class="dot">·</span>
+                Исследование на корпусе
+                <span class="dot">·</span>
+                Статья в Сисблоке
+              </p>
+
+              <div class="project-links">
+
+                <a
+                  href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Читать статью ↗
+                </a>
+
+                <span class="dot">·</span>
+
+                <a
+                  href="https://github.com/zhenyacode/acrofinder/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact" aria-label="Контакты">
+
+        <div class="section-header">
+          <span>ОБРАТНАЯ СВЯЗЬ</span>
+        </div>
+
+        <h2 class="contact__title">
+          Давайте общаться
+        </h2>
+
+        <p class="contact__desc">
+          Если вы занимаетесь чем-то похожим, хотите показать свою работу
+          или придумать что-нибудь вместе — давайте познакомимся.
+        </p>
+
+        <div class="contact__links">
+
+          <a href="mailto:dunenkov.evgeniy@gmail.com">
+            Gmail ↗
+          </a>
+
+          <span class="dot">·</span>
+
+          <a
+            href="https://t.me/chbchk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Telegram ↗
+          </a>
+
+          <span class="dot">·</span>
+
+          <a
+            href="https://github.com/zhenyacode"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+        <p class="channel-note">  
+          А в канале
+          <a
+            href="https://t.me/chwzh"
+            target="_blank"
+            rel="noreferrer"
+          >@chwzh</a>
+          я иногда делюсь тем, над чем сейчас работаю.
+        </p>
+
+      </section>
+
+
+      <footer class="site-footer">
+
+        <div class="footer-row">
+          <span>kultkod </span>
+        </div>
+
+      </footer>
+
+    </main>
+
+  </div>
+</body>
+</html>

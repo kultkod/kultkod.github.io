@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Текст в динамике</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- sticky-навигация ВСЕГДА сверху -->
+<div class="sticky-host">
+  <section class="player" aria-label="Навигация по версиям">
+    <div class="project-breadcrumb">
+        <span class="project-breadcrumb-root">Текст в динамике</span>
+        <span class="project-breadcrumb-sep">/</span>
+        <span id="projectName" class="project-breadcrumb-name"></span>
+        <span class="project-breadcrumb-sep">/</span>
+        <span id="partName" class="project-breadcrumb-name"></span>
+    </div>
+    <div class="nav-row">
+
+      <!-- LEFT -->
+      <div class="nav-left">
+
+      <div class="edge-labels">
+        <div id="edgeLeftBlock" class="edge-label-block edge-label--left">
+          <div class="edge-cap">Исходная версия:</div>
+          <div id="edgeLeftLabel" class="edge-label"></div>
+        </div>
+
+        <div id="edgeRightBlock" class="edge-label-block edge-label--right">
+          <div class="edge-cap">Конечная версия:</div>
+          <div id="edgeRightLabel" class="edge-label"></div>
+        </div>
+      </div>
+
+        <div id="edgeProgress" class="edge-progress">
+          <div class="progress-line">
+            <div class="progress-base"></div>
+            <div id="opsFill" class="progress-fill"></div>
+
+            <input
+              type="range"
+              id="slider"
+              class="scrubber"
+              min="0"
+              max="0"
+              value="0"
+              aria-label="Позиция внутри перехода"
+            >
+          </div>
+        </div>
+
+        <div class="bar bar-compact">
+          <div class="bar-left">
+            <button id="prev" class="btn" title="Назад (можно ← на клавиатуре)">←</button>
+            <button id="next" class="btn" title="Вперёд (можно → на клавиатуре)">→</button>
+            <span id="stepLabel" class="step"></span>
+            <span id="status" class="status rest"></span>
+          </div>
+
+          <div class="bar-right">
+            <button id="settingsBtn" class="icon-btn" type="button" title="Настройки">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M19.14,12.94a7.43,7.43,0,0,0,.05-.94,7.43,7.43,0,0,0-.05-.94l2.11-1.65a.5.5,0,0,0,.12-.63l-2-3.46a.5.5,0,0,0-.6-.22l-2.49,1a7.28,7.28,0,0,0-1.63-.94l-.38-2.65A.5.5,0,0,0,13.78,1H10.22a.5.5,0,0,0-.49.42L9.35,4.07a7.28,7.28,0,0,0-1.63.94l-2.49-1a.5.5,0,0,0-.6.22l-2,3.46a.5.5,0,0,0,.12.63L4.86,11.06a7.43,7.43,0,0,0-.05.94,7.43,7.43,0,0,0,.05.94L2.75,14.59a.5.5,0,0,0-.12.63l2,3.46a.5.5,0,0,0,.6.22l2.49-1a7.28,7.28,0,0,0,1.63.94l.38,2.65a.5.5,0,0,0,.49.42h3.56a.5.5,0,0,0,.49-.42l.38-2.65a7.28,7.28,0,0,0,1.63-.94l2.49,1a.5.5,0,0,0,.6-.22l2-3.46a.5.5,0,0,0-.12-.63Zm-7.14,2.56A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+              </svg>
+            </button>
+
+            <div id="settingsPanel" class="settings" hidden>
+              <div class="settings-title">Настройки</div>
+
+              <div class="settings-group">
+                <div class="settings-label">Подсветка правок</div>
+
+                <label class="radio">
+                  <input type="radio" name="hl" value="doc" checked>
+                  весь документ
+                </label>
+
+                <label class="radio">
+                  <input type="radio" name="hl" value="para">
+                  текущий абзац
+                </label>
+
+                <label class="radio">
+                  <input type="radio" name="hl" value="off">
+                  не подсвечивать
+                </label>
+              </div>
+
+              <div class="settings-group">
+                <div class="settings-label">Размер шрифта</div>
+                <div class="font-row">
+                  <button id="fontMinus" class="btn small" type="button">−</button>
+                  <div id="fontValue" class="font-val"></div>
+                  <button id="fontPlus" class="btn small" type="button">+</button>
+                </div>
+              </div>
+
+              <div class="settings-group">
+                <label class="check">
+                  <input type="checkbox" id="autoScroll">
+                  автопрокрутка к правкам
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edge-options-zone" aria-label="Следующие переходы">
+          <div id="edgeOptions" class="edge-options" style="display:none;"></div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="nav-right">
+        <div class="graph-mini-head">
+          <div class="graph-mini-title">Карта версий</div>
+
+          <div class="zoom">
+            <button id="zoomOut" class="zoom-btn"
+              title="Уменьшить (можно колёсиком над картой)">−</button>
+            <button id="zoomIn" class="zoom-btn"
+              title="Увеличить (можно колёсиком над картой)">+</button>
+          </div>
+        </div>
+
+        <div id="graphViewport" class="graph-viewport">
+          <div id="graph" class="graph graph-mini">
+            <svg id="graphSvg" class="graph-svg" preserveAspectRatio="none"></svg>
+            <div id="graphNodes" class="graph-nodes"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<div class="container">
+
+  <header>
+    <h1 id="title">Загрузка…</h1>
+    <div id="part" class="subtitle"></div>
+  </header>
+
+  <main id="text" class="text"></main>
+
+  <div class="source-note">
+    <div id="srcNote"></div>
+    <div id="methodNote" class="method"></div>
+  </div>
+
+</div>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
