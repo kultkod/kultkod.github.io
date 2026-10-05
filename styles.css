@@ -31,17 +31,14 @@
   box-sizing: border-box;
 }
 
-
 html,
 body {
   height: 100%;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   margin: 0;
@@ -56,7 +53,6 @@ body {
   text-rendering: geometricPrecision;
 }
 
-
 a {
   color: inherit;
 
@@ -65,11 +61,9 @@ a {
   text-decoration-thickness: 1px;
 }
 
-
 a:hover {
   text-decoration-color: var(--text);
 }
-
 
 :focus-visible {
   outline: 2px solid color-mix(in oklab, var(--text) 50%, transparent);
@@ -93,7 +87,6 @@ a:hover {
 
   border-radius: 10px;
 }
-
 
 .skip:focus {
   left: 12px;
@@ -124,7 +117,6 @@ a:hover {
   z-index: 50;
 }
 
-
 .topbar__row {
   display: flex;
 
@@ -136,11 +128,9 @@ a:hover {
   padding: var(--s3) 0;
 }
 
-
 .brand {
   text-decoration: none;
 }
-
 
 .brand__name {
   font-family: var(--sans);
@@ -148,7 +138,6 @@ a:hover {
 
   letter-spacing: 0.01em;
 }
-
 
 .nav a {
   margin-left: 18px;
@@ -158,14 +147,12 @@ a:hover {
   color: var(--muted);
 }
 
-
 .nav a:hover {
   color: var(--text);
 
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
 
 .rule {
   border-top: 1px solid var(--line);
@@ -178,7 +165,6 @@ a:hover {
   padding: var(--s6) 0 var(--s5);
 }
 
-
 .hero__title {
   margin: 0 0 var(--s3);
 
@@ -190,7 +176,6 @@ a:hover {
   font-size: clamp(36px, 5vw, 56px);
   line-height: 1.05;
 }
-
 
 .hero__lead {
   margin: 0;
@@ -215,7 +200,6 @@ a:hover {
   position: relative;
   display: inline;
 }
-
 
 .areas__trigger {
   appearance: none;
@@ -246,12 +230,10 @@ a:hover {
   transition: border-color 150ms ease;
 }
 
-
 .areas__trigger:hover,
 .areas__trigger:focus-visible {
   border-bottom-color: var(--text);
 }
-
 
 .areas__trigger:focus-visible {
   outline:
@@ -263,10 +245,8 @@ a:hover {
     );
 
   outline-offset: 3px;
-
   border-radius: 2px;
 }
-
 
 .areas__tooltip {
   position: absolute;
@@ -314,7 +294,6 @@ a:hover {
     visibility 140ms ease;
 }
 
-
 .areas__tooltip > span {
   display: block;
 
@@ -328,7 +307,6 @@ a:hover {
 
   color: inherit;
 }
-
 
 .areas__tooltip a {
   color: inherit;
@@ -344,11 +322,9 @@ a:hover {
     );
 }
 
-
 .areas__tooltip a:hover {
   border-bottom-color: var(--text);
 }
-
 
 .areas:hover .areas__tooltip,
 .areas:focus-within .areas__tooltip {
@@ -372,7 +348,6 @@ a:hover {
   gap: 16px;
 
   padding: 0 0 var(--s3);
-
   margin-bottom: var(--s4);
 
   border-bottom: 1px solid var(--line);
@@ -402,24 +377,15 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-
 .project:first-of-type {
   padding-top: 20px;
 }
-
-
-/*
-  Последнему проекту не нужен разделитель:
-  следующий крупный раздел отделяется собственным
-  заголовком и вертикальным пространством.
-*/
 
 .project:last-of-type {
   padding-bottom: 0;
 
   border-bottom: 0;
 }
-
 
 .project-layout {
   display: grid;
@@ -430,12 +396,6 @@ a:hover {
 
   align-items: center;
 }
-
-
-/*
-  Квадратное превью примерно соответствует
-  высоте компактной текстовой части проекта.
-*/
 
 .project-media {
   width: 140px;
@@ -451,7 +411,6 @@ a:hover {
     );
 }
 
-
 .project-media img {
   display: block;
 
@@ -461,11 +420,9 @@ a:hover {
   object-fit: cover;
 }
 
-
 .project-content {
   min-width: 0;
 }
-
 
 .project-title {
   margin: 0 0 7px;
@@ -478,7 +435,6 @@ a:hover {
   font-size: clamp(24px, 3vw, 29px);
   line-height: 1.08;
 }
-
 
 .project-desc {
   margin: 0;
@@ -496,7 +452,6 @@ a:hover {
     );
 }
 
-
 .project-tech {
   margin: 9px 0 0;
 
@@ -506,13 +461,10 @@ a:hover {
   color: var(--muted2);
 }
 
-
 .mono {
   font-family: var(--mono);
-
   font-size: 0.95em;
 }
-
 
 .project-links {
   display: flex;
@@ -524,7 +476,6 @@ a:hover {
 
   font-size: 13.5px;
 }
-
 
 .project-links a {
   padding-bottom: 1px;
@@ -542,18 +493,15 @@ a:hover {
   transition: border-color 0.2s ease;
 }
 
-
 .project-links a:hover {
   border-bottom-color: var(--text);
 }
-
 
 .dot {
   margin: 0 6px;
 
   color: var(--muted2);
 }
-
 
 .project-media--interactive {
   overflow: visible;
@@ -584,12 +532,6 @@ a:hover {
   cursor: default;
 }
 
-
-/*
-  Текстовая область.
-  Снизу оставлено место под год.
-*/
-
 .td-preview__text {
   position: absolute;
 
@@ -611,12 +553,6 @@ a:hover {
   letter-spacing: -0.015em;
 }
 
-
-/*
-  Обе версии находятся в одном месте,
-  поэтому карточка при наведении не меняет размер.
-*/
-
 .td-preview__state {
   position: absolute;
 
@@ -634,7 +570,6 @@ a:hover {
     transform 260ms ease;
 }
 
-
 .td-preview__state--before {
   opacity: 1;
 
@@ -642,7 +577,6 @@ a:hover {
     translateY(-50%)
     translateY(0);
 }
-
 
 .td-preview__state--after {
   opacity: 0;
@@ -652,9 +586,6 @@ a:hover {
     translateY(4px);
 }
 
-
-/* DIFF */
-
 .td-preview__removed {
   color: #989893;
 
@@ -662,7 +593,6 @@ a:hover {
   text-decoration-thickness: 1px;
   text-decoration-color: #989893;
 }
-
 
 .td-preview__added {
   padding: 0 2px 1px;
@@ -672,9 +602,6 @@ a:hover {
 
   border-radius: 2px;
 }
-
-
-/* YEAR */
 
 .td-preview__year {
   position: absolute;
@@ -695,7 +622,6 @@ a:hover {
   color: var(--muted2);
 }
 
-
 .td-preview__year-before,
 .td-preview__year-after {
   position: absolute;
@@ -708,22 +634,17 @@ a:hover {
     transform 220ms ease;
 }
 
-
 .td-preview__year-before {
   opacity: 1;
 
   transform: translateY(0);
 }
 
-
 .td-preview__year-after {
   opacity: 0;
 
   transform: translateY(3px);
 }
-
-
-/* HOVER / KEYBOARD FOCUS */
 
 .td-preview:hover .td-preview__state--before,
 .td-preview:focus-visible .td-preview__state--before {
@@ -734,7 +655,6 @@ a:hover {
     translateY(-4px);
 }
 
-
 .td-preview:hover .td-preview__state--after,
 .td-preview:focus-visible .td-preview__state--after {
   opacity: 1;
@@ -744,14 +664,12 @@ a:hover {
     translateY(0);
 }
 
-
 .td-preview:hover .td-preview__year-before,
 .td-preview:focus-visible .td-preview__year-before {
   opacity: 0;
 
   transform: translateY(-3px);
 }
-
 
 .td-preview:hover .td-preview__year-after,
 .td-preview:focus-visible .td-preview__year-after {
@@ -760,13 +678,13 @@ a:hover {
   transform: translateY(0);
 }
 
-
 .td-preview:focus-visible {
   outline: 1px solid var(--muted2);
   outline-offset: 3px;
 
   border-radius: 0;
 }
+
 
 /* ACROSTICS INTERACTIVE PREVIEW */
 
@@ -788,12 +706,6 @@ a:hover {
 
   cursor: default;
 }
-
-
-/*
-  Текст здесь работает как текстовая фактура,
-  поэтому он мелкий и набран по ширине.
-*/
 
 .acro-preview__text {
   width: 100%;
@@ -818,9 +730,6 @@ a:hover {
   color: #5f5f5a;
 }
 
-
-/* WORDS */
-
 .acro-preview__word {
   color: inherit;
 
@@ -832,9 +741,6 @@ a:hover {
   transition: color 260ms ease;
 }
 
-
-/* FIRST LETTER */
-
 .acro-preview__first {
   color: inherit;
   font-weight: inherit;
@@ -844,29 +750,16 @@ a:hover {
     font-weight 220ms ease;
 }
 
-
-/*
-  При наведении основной текст почти исчезает.
-*/
-
 .acro-preview:hover .acro-preview__word,
 .acro-preview:focus-visible .acro-preview__word {
   color: #dcdcd9;
 }
-
-
-/*
-  Первые буквы проявляются красным.
-*/
 
 .acro-preview:hover .acro-preview__first,
 .acro-preview:focus-visible .acro-preview__first {
   color: #b83a32;
   font-weight: 700;
 }
-
-
-/* FOCUS */
 
 .acro-preview:focus-visible {
   outline: 1px solid var(--muted2);
@@ -875,21 +768,16 @@ a:hover {
   border-radius: 0;
 }
 
+
 /* CONTACT */
 
 .contact {
-  /*
-    Никакой дополнительной верхней линии.
-    Визуальное разделение обеспечивают расстояние
-    и линия в .section-header.
-  */
   margin-top: var(--s6);
 
   padding: var(--s5) 0 var(--s6);
 
   border-top: 0;
 }
-
 
 .contact__title {
   margin: 0 0 var(--s3);
@@ -902,7 +790,6 @@ a:hover {
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.05;
 }
-
 
 .contact__desc {
   margin: 0;
@@ -920,7 +807,6 @@ a:hover {
     );
 }
 
-
 .contact__links {
   display: flex;
   flex-wrap: wrap;
@@ -931,7 +817,6 @@ a:hover {
 
   font-size: 16px;
 }
-
 
 .contact__links a {
   padding-bottom: 2px;
@@ -949,11 +834,9 @@ a:hover {
   transition: border-color 0.2s ease;
 }
 
-
 .contact__links a:hover {
   border-bottom-color: var(--text);
 }
-
 
 .channel-note {
   margin: var(--s4) 0 0;
@@ -962,7 +845,6 @@ a:hover {
 
   font-size: 15px;
 }
-
 
 .channel-note a {
   color: var(--text);
@@ -979,7 +861,6 @@ a:hover {
   border-top: 1px solid var(--line);
 }
 
-
 .footer-row {
   display: flex;
 
@@ -990,381 +871,9 @@ a:hover {
   font-size: 13px;
 }
 
-
 .muted {
   color: var(--muted2);
 }
-
-
-/* MOBILE */
-
-@media (max-width: 520px) {
-
-  .project-media--interactive {
-  width: 96px;
-  height: 96px;
-}
-
-
-.td-preview {
-  width: 96px;
-  height: 96px;
-
-  padding: 9px;
-}
-
-
-.td-preview__text {
-  left: 9px;
-  right: 9px;
-
-  top: 8px;
-  bottom: 22px;
-
-  font-size: 11px;
-  line-height: 1.3;
-}
-
-
-.td-preview__year {
-  left: 9px;
-  bottom: 8px;
-
-  font-size: 7.5px;
-}
-
-  .nav a {
-    margin-left: 12px;
-  }
-
-
-  .areas__tooltip {
-    min-width: 180px;
-
-    padding: 7px 9px 8px;
-
-    top: calc(100% + 5px);
-  }
-
-
-  /*
-    На мобильном квадрат уменьшается,
-    но остаётся слева от текста.
-  */
-
-  .project-layout {
-    grid-template-columns: 96px minmax(0, 1fr);
-
-    gap: 13px;
-
-    align-items: start;
-  }
-
-
-  .project-media {
-    width: 96px;
-    height: 96px;
-  }
-
-
-  .project-title {
-    font-size: 22px;
-  }
-
-
-  .project-desc {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-
-  .project-tech {
-    margin-top: 8px;
-
-    font-size: 11.5px;
-  }
-
-
-  .project-links {
-    margin-top: 8px;
-
-    font-size: 12.5px;
-  }
-
-
-  .footer-row {
-    flex-direction: column;
-  }
-
-}
-
-
-/* REDUCED MOTION */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-
-  .areas__tooltip {
-    transition: none;
-    transform: none;
-  }
-
-  /* TEXT DYNAMICS INTERACTIVE PREVIEW */
-
-.td-preview {
-  position: relative;
-
-  width: 140px;
-  height: 140px;
-
-  overflow: hidden;
-
-  margin: 0;
-  padding: 14px;
-
-  border: 0;
-
-  background: var(--bg);
-  color: var(--text);
-
-  text-align: left;
-
-  cursor: default;
-}
-
-
-/*
-  Текстовая область.
-  Снизу оставлено место под год.
-*/
-
-.td-preview__text {
-  position: absolute;
-
-  left: 14px;
-  right: 14px;
-
-  top: 14px;
-  bottom: 30px;
-
-  display: flex;
-  align-items: center;
-
-  font-family: var(--serif);
-  font-size: 15.5px;
-  line-height: 1.34;
-
-  letter-spacing: -0.015em;
-}
-
-
-/*
-  Обе версии находятся в одном месте,
-  поэтому карточка при наведении не меняет размер.
-*/
-
-.td-preview__state {
-  position: absolute;
-
-  left: 0;
-  top: 50%;
-
-  width: 100%;
-
-  margin: 0;
-
-  transform: translateY(-50%);
-
-  transition:
-    opacity 220ms ease,
-    transform 260ms ease;
-}
-
-
-.td-preview__state--before {
-  opacity: 1;
-
-  transform:
-    translateY(-50%)
-    translateY(0);
-}
-
-
-.td-preview__state--after {
-  opacity: 0;
-
-  transform:
-    translateY(-50%)
-    translateY(4px);
-}
-
-
-/* DIFF */
-
-.td-preview__removed {
-  color: #989893;
-
-  text-decoration-line: line-through;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #989893;
-}
-
-
-.td-preview__added {
-  padding: 0 2px 1px;
-
-  background: #d8f1dc;
-  color: #173c20;
-
-  border-radius: 2px;
-}
-
-
-/* YEAR */
-
-.td-preview__year {
-  position: absolute;
-
-  left: 14px;
-  bottom: 12px;
-
-  width: 45px;
-  height: 11px;
-
-  font-family: var(--sans);
-  font-size: 9px;
-  font-weight: 500;
-  line-height: 1;
-
-  letter-spacing: 0.06em;
-
-  color: var(--muted2);
-}
-
-
-.td-preview__year-before,
-.td-preview__year-after {
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  transition:
-    opacity 180ms ease,
-    transform 220ms ease;
-}
-
-
-.td-preview__year-before {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-
-.td-preview__year-after {
-  opacity: 0;
-
-  transform: translateY(3px);
-}
-
-
-/* HOVER / KEYBOARD FOCUS */
-
-.td-preview:hover .td-preview__state--before,
-.td-preview:focus-visible .td-preview__state--before {
-  opacity: 0;
-
-  transform:
-    translateY(-50%)
-    translateY(-4px);
-}
-
-
-.td-preview:hover .td-preview__state--after,
-.td-preview:focus-visible .td-preview__state--after {
-  opacity: 1;
-
-  transform:
-    translateY(-50%)
-    translateY(0);
-}
-
-
-.td-preview:hover .td-preview__year-before,
-.td-preview:focus-visible .td-preview__year-before {
-  opacity: 0;
-
-  transform: translateY(-3px);
-}
-
-
-.td-preview:hover .td-preview__year-after,
-.td-preview:focus-visible .td-preview__year-after {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-
-.td-preview:focus-visible {
-  outline: 1px solid var(--muted2);
-  outline-offset: 3px;
-
-  border-radius: 0;
-}
-
-.acro-preview__word,
-.acro-preview__first {
-  transition: none;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* =========================================================
@@ -1372,20 +881,13 @@ a:hover {
    text-dynamics.html
    ========================================================= */
 
-
-/* PAGE */
-
 .essay {
   padding-top: var(--s5);
 }
 
-
-/* PROJECT HEADER */
-
 .essay-header {
   padding: var(--s4) 0 var(--s6);
 }
-
 
 .essay-back {
   display: inline-block;
@@ -1398,14 +900,12 @@ a:hover {
   text-decoration: none;
 }
 
-
 .essay-back:hover {
   color: var(--text);
 
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
 
 .essay-title {
   max-width: 640px;
@@ -1420,7 +920,6 @@ a:hover {
 
   letter-spacing: -0.025em;
 }
-
 
 .essay-lead {
   max-width: 600px;
@@ -1452,7 +951,6 @@ a:hover {
   color: var(--muted);
 }
 
-
 .epigraph__quote {
   margin: 0;
 
@@ -1460,11 +958,6 @@ a:hover {
   font-size: 15px;
   line-height: 1.7;
 }
-
-
-/*
-  Само многоточие является кнопкой.
-*/
 
 .epigraph__toggle {
   appearance: none;
@@ -1489,12 +982,10 @@ a:hover {
     border-color 150ms ease;
 }
 
-
 .epigraph__toggle:hover {
   color: var(--text);
   border-bottom-color: var(--text);
 }
-
 
 .epigraph__toggle:focus-visible {
   outline: 1px solid var(--muted);
@@ -1503,21 +994,13 @@ a:hover {
   border-radius: 2px;
 }
 
-
-/*
-  Важно: никакое другое display-правило
-  не должно перебить hidden.
-*/
-
 .epigraph__rest[hidden] {
   display: none;
 }
 
-
 .epigraph__rest {
   color: inherit;
 }
-
 
 .epigraph__source {
   margin: 10px 0 0;
@@ -1535,7 +1018,6 @@ a:hover {
   max-width: 620px;
 }
 
-
 .essay-body p {
   margin: 0 0 1.15em;
 
@@ -1550,11 +1032,9 @@ a:hover {
     );
 }
 
-
 .essay-body p:last-child {
   margin-bottom: 0;
 }
-
 
 .essay-intro {
   margin-bottom: 0;
@@ -1568,7 +1048,6 @@ a:hover {
   margin-top: 72px;
 }
 
-
 .essay-section-heading {
   max-width: 620px;
 
@@ -1577,7 +1056,6 @@ a:hover {
 
   border-bottom: 1px solid var(--line);
 }
-
 
 .essay-section-heading h2 {
   margin: 0;
@@ -1598,7 +1076,6 @@ a:hover {
   margin: var(--s4) 0 0;
 }
 
-
 .demo-image {
   display: block;
 
@@ -1610,7 +1087,6 @@ a:hover {
   border: 1px solid var(--line);
 }
 
-
 .demo-figure figcaption {
   margin-top: 8px;
 
@@ -1620,11 +1096,9 @@ a:hover {
   color: var(--muted2);
 }
 
-
 .demo-action {
   margin: var(--s3) 0 0;
 }
-
 
 .primary-link {
   display: inline-block;
@@ -1638,7 +1112,6 @@ a:hover {
 
   border-bottom: 1px solid var(--text);
 }
-
 
 .primary-link:hover {
   border-bottom-color: var(--muted);
@@ -1670,7 +1143,6 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-
 .pipeline__item {
   display: flex;
   flex-direction: column;
@@ -1679,7 +1151,6 @@ a:hover {
 
   min-width: 0;
 }
-
 
 .pipeline__eyebrow {
   font-size: 10px;
@@ -1690,12 +1161,10 @@ a:hover {
   color: var(--muted2);
 }
 
-
 .pipeline__item strong {
   font-size: 13px;
   font-weight: 500;
 }
-
 
 .pipeline__item > span:last-child {
   font-size: 11px;
@@ -1703,7 +1172,6 @@ a:hover {
 
   color: var(--muted);
 }
-
 
 .pipeline__arrow {
   font-size: 13px;
@@ -1719,7 +1187,6 @@ a:hover {
 
   margin-top: 48px;
 }
-
 
 .essay-subsection h3 {
   margin: 0 0 var(--s3);
@@ -1761,7 +1228,6 @@ a:hover {
   font-size: 14px !important;
 }
 
-
 .essay-inline-link a {
   padding-bottom: 1px;
 
@@ -1775,7 +1241,6 @@ a:hover {
       transparent
     );
 }
-
 
 .essay-inline-link a:hover {
   border-bottom-color: var(--text);
@@ -1799,17 +1264,14 @@ a:hover {
     );
 }
 
-
 .essay-list li {
   margin-bottom: 12px;
   padding-left: 4px;
 }
 
-
 .essay-list li:last-child {
   margin-bottom: 0;
 }
-
 
 .essay-list strong {
   font-weight: 500;
@@ -1822,7 +1284,6 @@ a:hover {
   padding-bottom: var(--s5);
 }
 
-
 .essay-links {
   display: flex;
   flex-wrap: wrap;
@@ -1833,7 +1294,6 @@ a:hover {
 
   font-size: 15px;
 }
-
 
 .essay-links a {
   padding-bottom: 2px;
@@ -1848,7 +1308,6 @@ a:hover {
       transparent
     );
 }
-
 
 .essay-links a:hover {
   border-bottom-color: var(--text);
@@ -1866,7 +1325,6 @@ a:hover {
   border-top: 1px solid var(--line);
 }
 
-
 .essay-source p {
   margin: 0;
 
@@ -1875,7 +1333,6 @@ a:hover {
 
   color: var(--muted2);
 }
-
 
 .essay-source a {
   color: var(--text);
@@ -1886,74 +1343,145 @@ a:hover {
 
 @media (max-width: 520px) {
 
+  .nav a {
+    margin-left: 12px;
+  }
+
+  .areas__tooltip {
+    min-width: 180px;
+
+    padding: 7px 9px 8px;
+
+    top: calc(100% + 5px);
+  }
+
+
+  /* Projects become vertical */
+
+  .project-layout {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    align-items: start;
+  }
+
+  .project-media,
+  .project-media--interactive {
+    width: 112px;
+    height: 112px;
+  }
+
+  .td-preview {
+    width: 112px;
+    height: 112px;
+
+    padding: 10px;
+  }
+
+  .td-preview__text {
+    left: 10px;
+    right: 10px;
+
+    top: 9px;
+    bottom: 24px;
+
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .td-preview__year {
+    left: 10px;
+    bottom: 9px;
+
+    font-size: 8px;
+  }
+
+  .acro-preview {
+    width: 112px;
+    height: 112px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .project-tech {
+    margin-top: 8px;
+
+    font-size: 11.5px;
+  }
+
+  .project-links {
+    margin-top: 8px;
+
+    font-size: 12.5px;
+  }
+
+  .footer-row {
+    flex-direction: column;
+  }
+
+
+  /* Essay */
+
   .essay {
     padding-top: var(--s4);
   }
-
 
   .essay-header {
     padding-bottom: var(--s5);
   }
 
-
   .essay-title {
     font-size: 40px;
   }
 
-
   .essay-lead {
     font-size: 18px;
   }
-
 
   .epigraph {
     margin-bottom: var(--s5);
     padding-left: 14px;
   }
 
-
   .epigraph__quote {
     font-size: 14px;
     line-height: 1.65;
   }
-
 
   .essay-body p {
     font-size: 16px;
     line-height: 1.68;
   }
 
-
   .essay-demo,
   .essay-section {
     margin-top: 54px;
   }
 
-
   .essay-section-heading h2 {
     font-size: 25px;
   }
-
 
   .essay-subsection {
     margin-top: 38px;
   }
 
-
   .essay-subsection h3 {
     font-size: 21px;
   }
-
 
   .essay-list {
     font-size: 15px;
     line-height: 1.58;
   }
-
-
-  /*
-    Схема на узком экране становится вертикальной.
-  */
 
   .pipeline {
     grid-template-columns: 1fr;
@@ -1962,7 +1490,6 @@ a:hover {
 
     padding: var(--s3) 0;
   }
-
 
   .pipeline__arrow {
     width: 14px;
@@ -1973,16 +1500,13 @@ a:hover {
     transform: rotate(90deg);
   }
 
-
   .pipeline__item strong {
     font-size: 14px;
   }
 
-
   .pipeline__item > span:last-child {
     font-size: 12px;
   }
-
 }
 
 
@@ -1990,12 +1514,21 @@ a:hover {
 
 @media (prefers-reduced-motion: reduce) {
 
-  .epigraph__toggle {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .areas__tooltip,
+  .epigraph__toggle,
+  .td-preview__state,
+  .td-preview__year-before,
+  .td-preview__year-after,
+  .acro-preview__word,
+  .acro-preview__first {
     transition: none;
   }
 
+  .areas__tooltip {
+    transform: none;
+  }
 }
-
-
-
-
