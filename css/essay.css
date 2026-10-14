@@ -1,0 +1,451 @@
+/* =========================================================
+   ESSAY LAYOUT
+   ========================================================= */
+
+.essay {
+  padding-top: var(--s5);
+}
+
+.essay-header {
+  padding: var(--s4) 0 var(--s6);
+}
+
+.essay-back {
+  display: inline-block;
+  margin-bottom: var(--s4);
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.essay-back:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.essay-title {
+  max-width: 640px;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(42px, 7vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.essay-lead {
+  max-width: 600px;
+  margin: var(--s3) 0 0;
+  font-size: clamp(19px, 2.4vw, 23px);
+  line-height: 1.45;
+  color: color-mix(in oklab, var(--text) 88%, var(--muted));
+}
+
+
+/* =========================================================
+   EPIGRAPH
+   ========================================================= */
+
+.epigraph {
+  max-width: 590px;
+  margin: 0 0 var(--s6);
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.epigraph__quote {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.epigraph__toggle {
+  appearance: none;
+  margin: 0;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1px dotted var(--muted2);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.epigraph__toggle:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
+.epigraph__toggle:focus-visible {
+  outline: 1px solid var(--muted);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.epigraph__rest[hidden] {
+  display: none;
+}
+
+.epigraph__source {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted2);
+}
+
+
+/* =========================================================
+   MAIN TEXT
+   ========================================================= */
+
+.essay-body {
+  max-width: 620px;
+}
+
+.essay-body p {
+  margin: 0 0 1.15em;
+  font-size: 17px;
+  line-height: 1.72;
+  color: color-mix(in oklab, var(--text) 94%, var(--muted));
+}
+
+.essay-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.essay-demo,
+.essay-section {
+  margin-top: 72px;
+}
+
+.essay-section-heading {
+  max-width: 620px;
+  margin-bottom: var(--s4);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.essay-section-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(25px, 3.5vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   DEMO
+   ========================================================= */
+
+.demo-figure {
+  margin: var(--s4) 0 0;
+}
+
+.demo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.demo-figure figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted2);
+}
+
+.demo-action {
+  margin: var(--s3) 0 0;
+}
+
+.primary-link {
+  display: inline-block;
+  padding-bottom: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--text);
+}
+
+.primary-link:hover {
+  border-bottom-color: var(--muted);
+}
+
+
+/* =========================================================
+   PIPELINE
+   ========================================================= */
+
+.pipeline {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) auto
+    minmax(0, 1fr) auto
+    minmax(0, 1fr) auto
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--s5);
+  padding: var(--s3) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pipeline__item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.pipeline__eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted2);
+}
+
+.pipeline__item strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pipeline__item > span:last-child {
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.pipeline__arrow {
+  font-size: 13px;
+  color: var(--muted2);
+}
+
+
+/* =========================================================
+   SUBSECTIONS
+   ========================================================= */
+
+.essay-subsection {
+  max-width: 620px;
+  margin-top: 48px;
+}
+
+.essay-subsection h3 {
+  margin: 0 0 var(--s3);
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   INLINE ELEMENTS
+   ========================================================= */
+
+.inline-code {
+  padding: 1px 4px;
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: color-mix(in oklab, var(--bg) 75%, var(--line));
+  border-radius: 2px;
+}
+
+.essay-inline-link {
+  margin-top: var(--s3) !important;
+  font-size: 14px !important;
+}
+
+.essay-inline-link a {
+  padding-bottom: 1px;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--text) 28%, transparent);
+}
+
+.essay-inline-link a:hover {
+  border-bottom-color: var(--text);
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.essay-list {
+  margin: var(--s4) 0 0;
+  padding-left: 1.25em;
+  font-size: 16px;
+  line-height: 1.62;
+  color: color-mix(in oklab, var(--text) 92%, var(--muted));
+}
+
+.essay-list li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+.essay-list li:last-child {
+  margin-bottom: 0;
+}
+
+.essay-list strong {
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   LINKS / END
+   ========================================================= */
+
+.essay-end {
+  padding-bottom: var(--s5);
+}
+
+.essay-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--s4);
+  font-size: 15px;
+}
+
+.essay-links a {
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-border);
+}
+
+.essay-links a:hover {
+  border-bottom-color: var(--text);
+}
+
+.essay-source {
+  max-width: 620px;
+  margin-top: var(--s5);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+}
+
+.essay-source p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted2);
+}
+
+.essay-source a {
+  color: var(--text);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .essay {
+    padding-top: var(--s4);
+  }
+
+  .essay-header {
+    padding-bottom: var(--s5);
+  }
+
+  .essay-title {
+    font-size: 40px;
+  }
+
+  .essay-lead {
+    font-size: 18px;
+  }
+
+  .epigraph {
+    margin-bottom: var(--s5);
+    padding-left: 14px;
+  }
+
+  .epigraph__quote {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .essay-body p {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  .essay-demo,
+  .essay-section {
+    margin-top: 54px;
+  }
+
+  .essay-section-heading h2 {
+    font-size: 25px;
+  }
+
+  .essay-subsection {
+    margin-top: 38px;
+  }
+
+  .essay-subsection h3 {
+    font-size: 21px;
+  }
+
+  .essay-list {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: var(--s3) 0;
+  }
+
+  .pipeline__arrow {
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+    transform: rotate(90deg);
+  }
+
+  .pipeline__item strong {
+    font-size: 14px;
+  }
+
+  .pipeline__item > span:last-child {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .epigraph__toggle {
+    transition: none;
+  }
+}

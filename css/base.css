@@ -1,0 +1,214 @@
+/* =========================================================
+   DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+  /* Colors */
+  --bg: #f4f4f1;
+  --text: #171717;
+  --muted: #6f6f6a;
+  --muted2: #8a8a84;
+  --line: #d7d7d2;
+
+  /* Derived colors */
+  --text-90: color-mix(in oklab, var(--text) 90%, var(--muted));
+  --link-border: color-mix(in oklab, var(--text) 25%, transparent);
+
+  /* Typography */
+  --serif: "Literata", ui-serif, Georgia, "Times New Roman", Times, serif;
+  --sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Layout */
+  --page: 720px;
+  --gutter: clamp(16px, 4vw, 32px);
+
+  /* Spacing */
+  --s3: 16px;
+  --s4: 24px;
+  --s5: 26px;
+  --s6: 56px;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--text) 50%, transparent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  padding: 10px 12px;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: 10px;
+}
+
+.skip:focus {
+  left: 12px;
+  z-index: 100;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+.page {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 50;
+}
+
+.topbar__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: var(--s3) 0;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand__name {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rule {
+  border-top: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.mono {
+  font-family: var(--mono);
+  font-size: 0.95em;
+}
+
+.dot {
+  margin: 0 6px;
+  color: var(--muted2);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  margin: var(--s6) 0 var(--s5);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .nav a {
+    margin-left: 12px;
+  }
+
+  .footer-row {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
