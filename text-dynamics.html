@@ -55,7 +55,7 @@
         </a>
 
         <nav class="nav" aria-label="Навигация">
-          <a href="./#works">Проекты</a>
+          <a href="./#projects">Проекты</a>
           <a href="./#contact">Контакты</a>
         </nav>
 
@@ -176,11 +176,13 @@
 
         <figure class="demo-figure">
 
-          <img
-            class="demo-image"
-            src="./demo.gif"
-            alt="Плеер «Текст в динамике»: переход между редакциями «Ревизора» с подсветкой изменений"
-          >
+        <img
+          class="demo-image"
+          src="./demo.gif"
+          loading="lazy"
+          decoding="async"
+          alt="Плеер «Текст в динамике»: переход между редакциями «Ревизора» с подсветкой изменений"
+        >
 
           <figcaption>
             Фрагмент шестого явления «Ревизора» Н. В. Гоголя.
@@ -354,7 +356,7 @@
 
             <p class="essay-inline-link">
               <a
-                href="https://github.com/kultkod/text-dynamics"
+                href="https://github.com/zhenyacode/tdj_builder"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -558,7 +560,7 @@
           <span class="dot">·</span>
 
           <a
-            href="https://github.com/kultkod/text-dynamics"
+            href="https://github.com/zhenyacode/tdj_builder"
             target="_blank"
             rel="noreferrer"
           >
@@ -610,17 +612,18 @@
   </div>
 
 
-  <script>
-    const epigraphToggle = document.querySelector(".epigraph__toggle");
-    const epigraphRest = document.querySelector(".epigraph__rest");
+<script>
+  const epigraphToggle = document.querySelector(".epigraph__toggle");
+  const epigraphRest = document.querySelector(".epigraph__rest");
 
-    if (epigraphToggle && epigraphRest) {
-      epigraphToggle.addEventListener("click", () => {
-        epigraphRest.hidden = false;
-        epigraphToggle.remove();
-      });
-    }
-  </script>
+  if (epigraphToggle && epigraphRest) {
+    epigraphToggle.addEventListener("click", () => {
+      epigraphRest.hidden = false;
+      epigraphToggle.setAttribute("aria-expanded", "true");
+      epigraphToggle.remove();
+    });
+  }
+</script>
 
 </body>
 </html>

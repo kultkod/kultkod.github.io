@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Женя / kultkod. Исследую интересные мне вещи и придумываю формы, в которых о них можно рассказать — через текст, данные, код и интерфейсы."
+    content="Женя / kultkod. Исследую интересные вещи и рассказываю о них с помощью текста, данных и кода."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,120 +22,170 @@
   <link rel="stylesheet" href="./css/base.css" />
   <link rel="stylesheet" href="./css/home.css" />
 
-      <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113435962', 'ym');
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+      k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script',
+      'https://mc.yandex.ru/metrika/tag.js?id=113435962', 'ym');
 
-        ym(113435962, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/113435962" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    ym(113435962, 'init', {
+      ssr:true,
+      webvisor:true,
+      clickmap:true,
+      ecommerce:"dataLayer",
+      referrer:document.referrer,
+      url:location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  </script>
+  <noscript>
+    <div>
+      <img
+        src="https://mc.yandex.ru/watch/113435962"
+        style="position:absolute;left:-9999px;"
+        alt=""
+      >
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
 </head>
 
 <body>
-  <a class="skip" href="#content">К содержанию</a>
 
-  <div class="page">
+<a class="skip" href="#content">К содержанию</a>
 
-    <header class="topbar">
-      <div class="topbar__row">
+<div class="page">
 
-        <a class="brand" href="./" aria-label="На главную">
-          <span class="brand__name">kultkod</span>
-        </a>
+  <!-- HEADER -->
 
-        <nav class="nav" aria-label="Навигация">
-          <a href="#works">Проекты</a>
-          <a href="#contact">Контакты</a>
-        </nav>
+  <header class="topbar">
 
+    <div class="topbar__row">
+
+      <a class="brand" href="./" aria-label="На главную">
+        <span class="brand__name">kultkod</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+
+      </nav>
+
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+  </header>
+
+
+  <main id="content">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero" aria-label="Вступление">
+
+      <h1 class="hero__title">
+        Интерактивные эссе
+      </h1>
+
+      <p class="hero__lead">
+
+        Привет, меня зовут
+
+        <span class="areas">
+          <button
+            class="areas__trigger"
+            type="button"
+            aria-describedby="contact-tooltip"
+          >Женя</button>
+
+          <span
+            class="areas__tooltip"
+            id="contact-tooltip"
+            role="tooltip"
+          >
+            <span>
+              <a
+                href="https://t.me/chbchk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Telegram ↗</a>
+            </span>
+
+            <span>
+              <a href="mailto:dunenkov.evgeniy@gmail.com">
+                Почта ↗
+              </a>
+            </span>
+          </span>
+        </span>.
+
+        Я исследую интересные вещи
+
+        <span class="areas">
+          <button
+            class="areas__trigger"
+            type="button"
+            aria-describedby="areas-tooltip"
+          >в разных областях</button>
+
+          <span
+            class="areas__tooltip"
+            id="areas-tooltip"
+            role="tooltip"
+          >
+            <span>язык</span>
+            <span>литература</span>
+            <span>финансы</span>
+            <span>статистика</span>
+            <span>интерфейсы</span>
+            <span>визуализация данных</span>
+            <span>музыка</span>
+          </span>
+        </span>
+
+        и рассказываю о них с помощью текста, данных и кода.
+
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================
+         PROJECTS
+         =================================================== -->
+
+    <section class="section" id="projects">
+
+      <div class="section-header">
+        ПРОЕКТЫ
       </div>
 
-      <div class="rule" aria-hidden="true"></div>
-    </header>
-
-
-    <main id="content">
-
-      <!-- HERO -->
-      <section class="hero" aria-label="Вступление">
-
-        <h1 class="hero__title">
-          Интерактивные эссе
-        </h1>
-
-        <p class="hero__lead">
-          Привет, меня зовут
-          <span class="areas">
-            <button
-              class="areas__trigger"
-              type="button"
-              aria-describedby="contact-tooltip"
-            >Женя</button><span
-              class="areas__tooltip"
-              id="contact-tooltip"
-              role="tooltip"
-            >
-              <span><a
-            href="https://t.me/chbchk"
-            target="_blank"
-            rel="noreferrer"
-          >Telegram</a></span>
-              <span><a
-            href="mailto:dunenkov.evgeniy@gmail.com">Почта</a></span></span></span>.
-          Я исследую интересные вещи
-          <span class="areas">
-            <button
-              class="areas__trigger"
-              type="button"
-              aria-describedby="areas-tooltip"
-            >в разных областях</button><span
-              class="areas__tooltip"
-              id="areas-tooltip"
-              role="tooltip"
-            >
-              <span>язык</span>
-              <span>литература</span>
-              <span>финансы</span>
-              <span>статистика</span>
-              <span>интерфейсы</span>
-              <span>визуализация данных</span>
-              <span>музыка</span>
-            </span>
-          </span> и рассказываю о них с помощью текста, данных и кода.
-        </p>
-
-      </section>
-
-
-      <!-- PROJECTS -->
-      <section id="works" class="works" aria-label="Проекты">
-
-        <div class="section-header">
-          <span>ПРОЕКТЫ</span>
-        </div>
+      <div class="inventory-grid">
 
 
         <!-- TEXT DYNAMICS -->
-        <article class="project">
 
-          <div class="project-layout">
+        <article class="project-card">
 
-          <div class="project-media project-media--interactive">
+          <a class="project-card__visual" 
+          href="./text-dynamics.html"
+          aria-label="Текст в динамике — о проекте">
 
-            <button
-              class="td-preview"
-              type="button"
-              aria-label="Показать изменение текста с 1836 по 1842 год"
-            >
-
-              <!-- TEXT -->
+            <div class="td-preview" aria-hidden="true">
 
               <div class="td-preview__text">
 
@@ -154,10 +204,7 @@
 
               </div>
 
-
-              <!-- YEAR -->
-
-              <div class="td-preview__year" aria-hidden="true">
+              <div class="td-preview__year">
 
                 <span class="td-preview__year-before">
                   1836
@@ -169,75 +216,70 @@
 
               </div>
 
-            </button>
-
-          </div>
-
-            <div class="project-content">
-
-              <h2 class="project-title">
-                Текст в динамике
-              </h2>
-
-              <p class="project-desc">
-                Попытка представить литературное произведение как рабочий процесс. Показать, как слова, фразы и целые фрагменты появляются, меняются и исчезают от версии к версии.
-              </p>
-
-              <p class="project-tech">
-                Визуализация на фронтенде (JS)
-                <span class="dot">·</span>
-                Формат <span class="mono">TDJ</span>
-                <span class="dot">·</span>
-                Утилита <span class="mono">TDJ Builder</span> (Python)
-              </p>
-
-              <div class="project-links">
-
-                <a href="./text-dynamics.html">
-                  О проекте
-                </a>
-
-                <span class="dot">·</span>
-
-                <a href="./text-dynamics/">
-                  Смотреть демо ↗
-                </a>
-
-                <span class="dot">·</span>
-
-                <a
-                  href="https://github.com/kultkod/text-dynamics"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub ↗
-                </a>
-
-              </div>
-
             </div>
+
+          </a>
+
+
+          <a
+            class="project-card__main"
+            href="./text-dynamics.html"
+          >
+
+            <h2 class="project-card__title">
+              Текст в динамике
+            </h2>
+
+            <p class="project-card__desc">
+              Плеер литературных произведений как истории правок.
+            </p>
+
+          </a>
+
+
+          <div class="project-card__links">
+
+            <a href="./text-dynamics.html">
+              Эссе
+            </a>
+
+            <span class="dot">·</span>
+
+            <a href="./text-dynamics/">
+              Демо ↗
+            </a>
+
+            <span class="dot">·</span>
+
+            <a
+              href="https://github.com/kultkod/text-dynamics"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
 
           </div>
 
         </article>
 
 
+
         <!-- ACROSTICS -->
-        <article class="project">
 
-          <div class="project-layout">
+        <article class="project-card">
 
-          <div class="project-media project-media--interactive">
+          <a class="project-card__visual"
+          href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Поиск акростихов — читать статью">
 
-            <button
-              class="acro-preview"
-              type="button"
-              aria-label="Показать первые буквы слов"
-            >
+            <div class="acro-preview" aria-hidden="true">
 
               <p class="acro-preview__text">
 
-                <span class="acro-preview__word"><span class="acro-preview__first">Р</span>ысистая</span>
+<span class="acro-preview__word"><span class="acro-preview__first">Р</span>ысистая</span>
                 <span class="acro-preview__word"><span class="acro-preview__first">е</span>зда</span>
                 <span class="acro-preview__word"><span class="acro-preview__first">ш</span>агом</span>,
                 <span class="acro-preview__word"><span class="acro-preview__first">и</span>ли</span>
@@ -263,131 +305,168 @@
                 <span class="acro-preview__word"><span class="acro-preview__first">е</span>два</span>
                 <span class="acro-preview__word"><span class="acro-preview__first">л</span>и</span>
                 <span class="acro-preview__word"><span class="acro-preview__first">з</span>автра</span>
-                <span class="acro-preview__word"><span class="acro-preview__first">я</span>виться</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">я</span>вится</span>
                 <span class="acro-preview__word"><span class="acro-preview__first">п</span>редсказуемая</span>!
-
               </p>
-
-            </button>
-
-          </div>
-
-            <div class="project-content">
-
-              <h2 class="project-title">
-                Поиск акростихов
-              </h2>
-
-              <p class="project-desc">
-                Акростих — это зашифрованное послание, в котором первые буквы строк или предложений складываются в отдельные слова или фразы. Можно ли находить такие послания автоматически?
-              </p>
-
-              <p class="project-tech">
-                Утилита Acrofinder (Python)
-                <span class="dot">·</span>
-                Исследование на корпусе
-                <span class="dot">·</span>
-                Статья в Сисблоке
-              </p>
-
-              <div class="project-links">
-
-                <a
-                  href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Читать статью ↗
-                </a>
-
-                <span class="dot">·</span>
-
-                <a
-                  href="https://github.com/zhenyacode/acrofinder/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub ↗
-                </a>
-
-              </div>
 
             </div>
+
+          </a>
+
+
+          <a
+            class="project-card__main"
+            href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h2 class="project-card__title">
+              Поиск акростихов
+            </h2>
+
+            <p class="project-card__desc">
+              Автоматический поиск скрытых посланий в текстах.
+            </p>
+
+          </a>
+
+
+          <div class="project-card__links">
+
+            <a
+              href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Статья ↗
+            </a>
+
+            <span class="dot">·</span>
+
+            <a
+              href="https://github.com/zhenyacode/acrofinder/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
 
           </div>
 
         </article>
 
-      </section>
 
 
-      <!-- CONTACT -->
-      <section id="contact" class="contact" aria-label="Контакты">
 
-        <div class="section-header">
-          <span>ОБРАТНАЯ СВЯЗЬ</span>
-        </div>
 
-        <h2 class="contact__title">
-          Давайте общаться
-        </h2>
-
-        <p class="contact__desc">
-          Если вы занимаетесь чем-то похожим, хотите показать свою работу
-          или придумать что-нибудь вместе — давайте познакомимся.
-        </p>
-
-        <div class="contact__links">
-
-          <a href="mailto:dunenkov.evgeniy@gmail.com">
-            Gmail ↗
-          </a>
-
-          <span class="dot">·</span>
+        <div class="inventory-slot">
 
           <a
-            href="https://t.me/chbchk"
-            target="_blank"
-            rel="noreferrer"
+            class="inventory-slot__link"
+            href="#contact"
+            aria-label="Предложить совместный проект"
           >
-            Telegram ↗
-          </a>
 
-          <span class="dot">·</span>
+            <span class="inventory-slot__plus">
+              +
+            </span>
 
-          <a
-            href="https://github.com/zhenyacode"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub ↗
+            <span class="inventory-slot__hint">
+              Сделаем что-нибудь вместе?
+            </span>
+
           </a>
 
         </div>
 
-        <p class="channel-note">  
-          А в канале
-          <a
-            href="https://t.me/chwzh"
-            target="_blank"
-            rel="noreferrer"
-          >@chwzh</a>
-          я иногда делюсь тем, над чем сейчас работаю.
-        </p>
 
-      </section>
+      </div>
+
+    </section>
 
 
-      <footer class="site-footer">
 
-        <div class="footer-row">
-          <span>kultkod </span>
-        </div>
 
-      </footer>
 
-    </main>
+    <!-- ===================================================
+         CONTACT
+         =================================================== -->
 
-  </div>
+    <section class="section contact" id="contact">
+
+      <div class="section-header">
+        ОБРАТНАЯ СВЯЗЬ
+      </div>
+
+      <h2 class="contact__title">
+        Давайте общаться
+      </h2>
+
+      <p class="contact__desc">
+        Если вы занимаетесь чем-то похожим, хотите показать
+        свою работу или придумать что-нибудь вместе —
+        давайте познакомимся.
+      </p>
+
+
+      <div class="contact__links">
+
+        <a href="mailto:dunenkov.evgeniy@gmail.com">
+          Gmail ↗
+        </a>
+
+        <a
+          href="https://t.me/chbchk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram ↗
+        </a>
+
+        <a
+          href="https://github.com/zhenyacode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
+
+      </div>
+
+
+      <p class="channel-note">
+
+        А в канале
+
+        <a
+          href="https://t.me/chwzh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >@chwzh</a>
+
+        я иногда делюсь тем, над чем сейчас работаю.
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-row">
+      <span>kultkod</span>
+    </div>
+
+  </footer>
+
+
+</div>
+
 </body>
 </html>

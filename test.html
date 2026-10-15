@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>kultkod — Интерактивные эссе</title>
+
+  <meta
+    name="description"
+    content="Женя / kultkod. Исследую интересные вещи и рассказываю о них с помощью текста, данных и кода."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+      k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script',
+      'https://mc.yandex.ru/metrika/tag.js?id=113435962', 'ym');
+
+    ym(113435962, 'init', {
+      ssr:true,
+      webvisor:true,
+      clickmap:true,
+      ecommerce:"dataLayer",
+      referrer:document.referrer,
+      url:location.href,
+      accurateTrackBounce:true,
+      trackLinks:true
+    });
+  </script>
+  <noscript>
+    <div>
+      <img
+        src="https://mc.yandex.ru/watch/113435962"
+        style="position:absolute;left:-9999px;"
+        alt=""
+      >
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+
+<a class="skip" href="#content">К содержанию</a>
+
+<div class="page">
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+
+    <div class="topbar__row">
+
+      <a class="brand" href="./" aria-label="На главную">
+        <span class="brand__name">kultkod</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#projects">Проекты</a>
+        <a href="#collections">Коллекции</a>
+        <a href="#diaries">Дневники</a>
+        <a href="#contact">Контакты</a>
+
+      </nav>
+
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+  </header>
+
+
+  <main id="content">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero" aria-label="Вступление">
+
+      <h1 class="hero__title">
+        Интерактивные эссе
+      </h1>
+
+      <p class="hero__lead">
+
+        Привет, меня зовут
+
+        <span class="areas">
+          <button
+            class="areas__trigger"
+            type="button"
+            aria-describedby="contact-tooltip"
+          >Женя</button>
+
+          <span
+            class="areas__tooltip"
+            id="contact-tooltip"
+            role="tooltip"
+          >
+            <span>
+              <a
+                href="https://t.me/chbchk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Telegram ↗</a>
+            </span>
+
+            <span>
+              <a href="mailto:dunenkov.evgeniy@gmail.com">
+                Почта ↗
+              </a>
+            </span>
+          </span>
+        </span>.
+
+        Я исследую интересные вещи
+
+        <span class="areas">
+          <button
+            class="areas__trigger"
+            type="button"
+            aria-describedby="areas-tooltip"
+          >в разных областях</button>
+
+          <span
+            class="areas__tooltip"
+            id="areas-tooltip"
+            role="tooltip"
+          >
+            <span>язык</span>
+            <span>литература</span>
+            <span>финансы</span>
+            <span>статистика</span>
+            <span>интерфейсы</span>
+            <span>визуализация данных</span>
+            <span>музыка</span>
+          </span>
+        </span>
+
+        и рассказываю о них с помощью текста, данных и кода.
+
+      </p>
+
+
+      <!-- STARTING POINTS -->
+
+      <div class="hero__links">
+
+        <a href="#">О сайте ↗</a>
+        <a href="#">Манифест ↗</a>
+
+      </div>
+
+
+
+      <div class="now">
+
+        <span class="now__label">
+          NOW · ДЕКАБРЬ 2026
+        </span>
+
+        <p class="now__text">
+          Сейчас работаю над «Текстом в динамике»,
+          экспериментирую с визуализацией литературных правок
+          и собираю материалы для новых исследований.
+          Читаю о текстологии и цифровых архивах.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PROJECTS
+         =================================================== -->
+
+    <section class="section" id="projects">
+
+      <div class="section-header">
+        ПРОЕКТЫ
+      </div>
+
+      <div class="inventory-grid">
+
+
+        <!-- TEXT DYNAMICS -->
+
+        <article class="project-card">
+
+          <a class="project-card__visual" 
+          href="./text-dynamics.html"
+          aria-label="Текст в динамике — о проекте">
+
+            <div class="td-preview" aria-hidden="true">
+
+              <div class="td-preview__text">
+
+                <p class="td-preview__state td-preview__state--before">
+                  Завтрак был у вас хорош.
+                </p>
+
+                <p class="td-preview__state td-preview__state--after">
+                  Завтрак
+                  <span class="td-preview__removed">был</span>
+                  у вас,
+                  <span class="td-preview__added">господа,</span>
+                  хорош<span class="td-preview__removed">.</span><span class="td-preview__added">...</span>
+                  <span class="td-preview__added">Лабардан!</span>
+                </p>
+
+              </div>
+
+              <div class="td-preview__year">
+
+                <span class="td-preview__year-before">
+                  1836
+                </span>
+
+                <span class="td-preview__year-after">
+                  1842
+                </span>
+
+              </div>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="project-card__main"
+            href="./text-dynamics.html"
+          >
+
+            <h2 class="project-card__title">
+              Текст в динамике
+            </h2>
+
+            <p class="project-card__desc">
+              Плеер литературных произведений как истории правок.
+            </p>
+
+          </a>
+
+
+          <div class="project-card__links">
+
+            <a href="./text-dynamics.html">
+              Эссе
+            </a>
+
+            <span class="dot">·</span>
+
+            <a href="./text-dynamics/">
+              Демо ↗
+            </a>
+
+            <span class="dot">·</span>
+
+            <a
+              href="https://github.com/kultkod/text-dynamics"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ACROSTICS -->
+
+        <article class="project-card">
+
+          <a class="project-card__visual"
+          href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Поиск акростихов — читать статью">
+
+            <div class="acro-preview" aria-hidden="true">
+
+              <p class="acro-preview__text">
+
+                <span class="acro-preview__word"><span class="acro-preview__first">Р</span>ысистая</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>зда</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">ш</span>агом</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">и</span>ли</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">т</span>русцой</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">е</span>сть</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">л</span>едяное</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">н</span>епоколебимое</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">о</span>бщественное</span>
+                <span class="acro-preview__word"><span class="acro-preview__first">н</span>астроение...</span>
+
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="project-card__main"
+            href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h2 class="project-card__title">
+              Поиск акростихов
+            </h2>
+
+            <p class="project-card__desc">
+              Автоматический поиск скрытых посланий в текстах.
+            </p>
+
+          </a>
+
+
+          <div class="project-card__links">
+
+            <a
+              href="https://sysblok.ru/philology/chto-takoe-akrostih-i-kak-najti-zashifrovannye-poslanija-v-tekste/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Статья ↗
+            </a>
+
+            <span class="dot">·</span>
+
+            <a
+              href="https://github.com/zhenyacode/acrofinder/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <a class="project-card__visual"
+          href="#">
+
+            <div class="demo-icon">
+              { 03 }
+            </div>
+
+          </a>
+
+          <a class="project-card__main" href="#">
+
+            <h2 class="project-card__title">
+              Проект 3
+            </h2>
+
+            <p class="project-card__desc">
+              Пример доступного проекта с описанием.
+            </p>
+
+          </a>
+
+          <div class="project-card__links">
+            <a href="#">Документация ↗</a>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <a class="project-card__visual"
+          href="#">
+
+            <div class="demo-icon">
+              ∿ ∿ ∿
+            </div>
+
+          </a>
+
+          <a class="project-card__main" href="#">
+
+            <h2 class="project-card__title">
+              Проект в работе
+            </h2>
+
+            <p class="project-card__desc">
+              Эксперимент, у которого уже есть черновик.
+            </p>
+
+          </a>
+
+          <div class="project-card__links">
+            <a href="#">Черновик</a>
+          </div>
+
+        </article>
+
+
+
+
+        <article class="project-card project-card--disabled">
+
+          <div class="project-card__visual">
+
+            <div class="demo-icon">
+              [ ? ]
+            </div>
+
+          </div>
+
+          <h2 class="project-card__title">
+            Недоступный проект
+          </h2>
+
+          <p class="project-card__desc">
+            Пока существует только как замысел.
+          </p>
+
+        </article>
+
+
+
+        <article class="project-card project-card--disabled">
+
+          <div class="project-card__visual">
+
+            <div class="demo-icon">
+              ⌘
+            </div>
+
+          </div>
+
+          <h2 class="project-card__title">
+            Будущий проект
+          </h2>
+
+          <p class="project-card__desc">
+            Ещё одно исследование в планах.
+          </p>
+
+        </article>
+
+
+        <div class="inventory-slot">
+
+          <a
+            class="inventory-slot__link"
+            href="#contact"
+            aria-label="Предложить совместный проект"
+          >
+
+            <span class="inventory-slot__plus">
+              +
+            </span>
+
+            <span class="inventory-slot__hint">
+              Сделаем что-нибудь вместе?
+            </span>
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <section class="section" id="collections">
+
+      <div class="section-header">
+        КОЛЛЕКЦИИ
+      </div>
+
+      <div class="inventory-grid">
+
+
+        <article class="collection-card">
+
+          <a class="collection-card__link" href="#">
+
+            <div class="collection-card__visual">
+
+              <div class="collection-box">
+                <span class="collection-box__glyph">⬡</span>
+              </div>
+
+            </div>
+
+            <span class="collection-card__title">
+              Коллекция 1
+            </span>
+
+            <span class="collection-card__count">
+              12 объектов
+            </span>
+
+          </a>
+
+        </article>
+
+
+
+        <article class="collection-card">
+
+          <a class="collection-card__link" href="#">
+
+            <div class="collection-card__visual">
+
+              <div class="collection-box">
+                <span class="collection-box__glyph">♫</span>
+              </div>
+
+            </div>
+
+            <span class="collection-card__title">
+              Коллекция 2
+            </span>
+
+            <span class="collection-card__count">
+              5 записей
+            </span>
+
+          </a>
+
+        </article>
+
+
+
+        <article class="collection-card">
+
+          <a class="collection-card__link" href="#">
+
+            <div class="collection-card__visual">
+
+              <div class="collection-box">
+                <span class="collection-box__glyph">¶</span>
+              </div>
+
+            </div>
+
+            <span class="collection-card__title">
+              Коллекция 3
+            </span>
+
+            <span class="collection-card__count">
+              24 материала
+            </span>
+
+          </a>
+
+        </article>
+
+
+
+        <article class="collection-card">
+
+          <a class="collection-card__link" href="#">
+
+            <div class="collection-card__visual">
+
+              <div class="collection-box">
+                <span class="collection-box__glyph">%</span>
+              </div>
+
+            </div>
+
+            <span class="collection-card__title">
+              Коллекция 4
+            </span>
+
+            <span class="collection-card__count">
+              3 файла
+            </span>
+
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="section" id="diaries">
+
+      <div class="section-header">
+        ДНЕВНИКИ И ЗАМЕТКИ
+      </div>
+
+
+      <div class="diaries-list">
+
+        <a class="diary-row" href="#">
+
+          <span class="diary-row__date">
+            14.10.2026
+          </span>
+
+          <span class="diary-row__title">
+            Заметка 1: наблюдения и размышления
+          </span>
+
+        </a>
+
+
+        <a class="diary-row" href="#">
+
+          <span class="diary-row__date">
+            08.10.2026
+          </span>
+
+          <span class="diary-row__title">
+            Заметка 2: звуковая зарисовка
+          </span>
+
+        </a>
+
+
+        <a class="diary-row" href="#">
+
+          <span class="diary-row__date">
+            02.10.2026
+          </span>
+
+          <span class="diary-row__title">
+            Черновик 1: исследование
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         CONTACT
+         =================================================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="section-header">
+        ОБРАТНАЯ СВЯЗЬ
+      </div>
+
+      <h2 class="contact__title">
+        Давайте общаться
+      </h2>
+
+      <p class="contact__desc">
+        Если вы занимаетесь чем-то похожим, хотите показать
+        свою работу или придумать что-нибудь вместе —
+        давайте познакомимся.
+      </p>
+
+
+      <div class="contact__links">
+
+        <a href="mailto:dunenkov.evgeniy@gmail.com">
+          Gmail ↗
+        </a>
+
+        <a
+          href="https://t.me/chbchk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram ↗
+        </a>
+
+        <a
+          href="https://github.com/zhenyacode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
+
+      </div>
+
+
+      <p class="channel-note">
+
+        А в канале
+
+        <a
+          href="https://t.me/chwzh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >@chwzh</a>
+
+        я иногда делюсь тем, над чем сейчас работаю.
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-row">
+      <span>kultkod</span>
+    </div>
+
+  </footer>
+
+
+</div>
+
+</body>
+</html>
