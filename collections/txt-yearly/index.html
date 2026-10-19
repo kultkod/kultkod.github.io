@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Русский язык по годам — kultkod</title>
+  <meta name="description" content="Личная коллекция избранных отрывков из русской литературы в хронологическом порядке.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/essay.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<a class="skip" href="#slide-content">К содержанию</a>
+
+<div class="page collection-page">
+
+  <!-- SITE HEADER -->
+
+  <header class="topbar">
+    <div class="topbar__row">
+      <a class="brand" href="../../" aria-label="На главную">
+        <span class="brand__name">kultkod</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../../#collections">Коллекции</a>
+        <a href="../../#contact">Контакты</a>
+      </nav>
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+  </header>
+
+
+  <main class="collection-main">
+
+    <!-- INTRODUCTION -->
+
+    <header class="collection-header">
+      <h1 class="essay-title">Русская проза по годам</h1>
+    </header>
+
+    <article class="essay-body collection-intro">
+      <p>
+        Это моя личная коллекция избранных отрывков
+        из русской литературы, выстроенных в хронологическом
+        порядке.
+      </p>
+
+      <p>
+        Идея этого проекта появилась у меня
+        несколько лет назад, когда я читал <i>«Записки русского
+        путешественника»</i> Карамзина. Меня поразило,
+        как резко именно на этом писателе русский язык
+        начинает напоминать язык, на котором мы пишем сегодня.
+      </p>
+
+      <p>
+        Конечно, избранные фрагменты не обязательно отражают
+        то, как в общем выглядел письменный русский язык в тот
+        или иной год. Тем не менее я хочу собрать такую коллекцию,
+        в которой каждый год, начиная с конца XVIII века, будет
+        представлен хотя бы одним прозаическим отрывком,
+        чтобы, листая отрывки год за годом, можно было
+        ухватить ощущение изменения языка.
+      </p>
+    </article>
+
+
+    <!-- DARK READER -->
+
+    <div class="reader-band">
+
+      <section class="reader" id="reader" aria-label="Литературные фрагменты">
+
+
+
+        <!-- YEAR -->
+
+        <div class="reader-header">
+          <div class="slide-year" id="slide-year"></div>
+        </div>
+
+        <!-- FRAGMENTS -->
+
+        <div class="slide-area" id="slide-area">
+          <article class="slide" id="slide-content" aria-live="polite"></article>
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="reader-controls">
+
+          <div class="reader-navigation">
+
+            <nav class="reader-navigation__buttons" aria-label="Навигация по годам">
+              <button class="nav-button" id="prev" type="button"
+                      aria-label="Предыдущий год">←</button>
+
+              <button class="nav-button" id="next" type="button"
+                      aria-label="Следующий год">→</button>
+
+              <button class="random-button" id="random-year" type="button">
+                Случайный год
+              </button>
+            </nav>
+
+            <div class="reader-navigation__right">
+
+              <span class="counter" id="counter">— / —</span>
+
+              <!-- SETTINGS -->
+
+              <div class="settings-wrapper">
+
+                <button class="settings-button" id="settings-button" type="button"
+                        aria-label="Настройки чтения" aria-expanded="false"
+                        aria-controls="settings-panel">
+
+                  <svg width="18" height="18" viewBox="0 0 24 24"
+                       fill="none" stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round"
+                       aria-hidden="true">
+
+                    <circle cx="12" cy="12" r="3"></circle>
+
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+
+                </button>
+
+                <div class="settings-panel" id="settings-panel" hidden>
+                  <span class="settings-label">Размер текста</span>
+
+                  <div class="font-size-control">
+                    <button class="font-button" id="font-decrease" type="button"
+                            aria-label="Уменьшить размер текста">−</button>
+
+                    <span id="font-size-value">14 px</span>
+
+                    <button class="font-button" id="font-increase" type="button"
+                            aria-label="Увеличить размер текста">+</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE -->
+
+          <div class="timeline-container">
+            <div class="timeline" id="timeline" role="slider" tabindex="0"
+                 aria-label="Выбор года" aria-orientation="horizontal">
+
+              <div class="timeline-track"></div>
+              <div class="timeline-ticks" id="timeline-ticks"></div>
+              <div class="timeline-markers" id="timeline-markers"></div>
+              <div class="timeline-cursor" id="timeline-cursor"></div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="reader-meta">
+        <span class="collection-info" id="collection-info">
+        Загрузка...
+        </span>
+        </div>
+
+      </section>
+    </div>
+
+
+    <!-- DETAILS -->
+
+    <section class="collection-details essay-section" aria-labelledby="details-title">
+
+      <div class="essay-section-heading">
+        <h2 id="details-title">Детали</h2>
+      </div>
+
+      <div class="essay-body">
+
+        <ul class="essay-list">
+          <li>
+            Год обычно соответствует году первой публикации;
+            в отдельных случаях указан год написания
+            или первого отдельного издания.
+          </li>
+
+          <li>
+            Тексты цитируются по доступным изданиям
+            и электронным библиотекам,
+
+            <span class="note-tooltip">
+              <button class="note-tooltip__trigger" id="accuracy-trigger"
+                      type="button" aria-expanded="false"
+                      aria-controls="accuracy-tooltip">
+                возможны неточности
+              </button>
+
+              <span class="note-tooltip__content" id="accuracy-tooltip" hidden>
+                У нас тут довольно вольно, но если вы точно нашли ошибку,
+                <a href="https://t.me/chbchk" target="_blank"
+                   rel="noopener noreferrer">напишите, пожалуйста ↗</a>.
+              </span>
+            </span>.
+          </li>
+
+          <li>
+            Орфография современная, но оригинальная лексика
+            по возможности сохранена.
+          </li>
+        </ul>
+
+      </div>
+
+
+      <!-- CONTRIBUTION -->
+
+      <div class="collection-contribute">
+
+        <h3>Коллекция пополняется</h3>
+
+        <div class="essay-body">
+          <p>
+            Я периодически добавляю сюда находки из своего чтения.
+            Если у вас есть любимые цитаты из русской прозы
+            для ещё не представленных на шкале лет,
+            <a href="https://t.me/chbchk" target="_blank"
+               rel="noopener noreferrer">присылайте</a>
+            (особенно буду рад отрывкам из литературы после 1950-х годов).
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    <div class="footer-row">
+      <a href="../../">kultkod</a>
+    </div>
+  </footer>
+
+</div>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
