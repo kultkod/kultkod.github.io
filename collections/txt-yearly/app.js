@@ -20,6 +20,8 @@ let currentFontSize = DEF_FONT;
 
 // ELEMENTS
 
+
+const areaEl = document.getElementById("slide-area");
 const yearEl = document.getElementById("slide-year");
 const reader = document.getElementById("reader");
 const contentEl = document.getElementById("slide-content");
@@ -347,25 +349,16 @@ function buildTimeline() {
 
 // NAVIGATION
 
-function scrollToReader() {
-  const rect = reader.getBoundingClientRect();
 
-  if (rect.top < 70 || rect.top > window.innerHeight - 100) {
-    reader.scrollIntoView({ behavior: "instant", block: "start" });
-  }
-}
-
-function goTo(index, updateHash = true, shouldScroll = true) {
+function goTo(index, updateHash = true) {
   if (index < 0 || index >= slides.length || index === currentIndex) return;
 
   currentIndex = index;
 
-  // Каждый год начинается с первого фрагмента.
-  document.getElementById("slide-area").scrollTop = 0;
+  // Сбрасываем только внутреннюю прокрутку.
+  areaEl.scrollTop = 0;
 
   render();
-
-  if (shouldScroll) scrollToReader();
 
   if (updateHash) {
     history.replaceState(null, "", "#" + slides[currentIndex].year);
@@ -434,7 +427,6 @@ function finishDrag(event) {
   }
 
   history.replaceState(null, "", "#" + slides[currentIndex].year);
-  scrollToReader();
 }
 
 timeline.addEventListener("pointerup", event => {
@@ -445,6 +437,41 @@ timeline.addEventListener("pointerup", event => {
 
 timeline.addEventListener("pointercancel", finishDrag);
 timeline.addEventListener("lostpointercapture", finishDrag);
+
+// TOUCH SWIPE
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+const SWIPE_THRESHOLD = 60;
+
+areaEl.addEventListener("touchstart", event => {
+  if (event.touches.length !== 1) return;
+
+  touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
+}, { passive: true });
+
+areaEl.addEventListener("touchend", event => {
+  if (!event.changedTouches.length) return;
+
+  const deltaX = event.changedTouches[0].clientX - touchStartX;
+  const deltaY = event.changedTouches[0].clientY - touchStartY;
+
+  // Игнорируем небольшие и преимущественно вертикальные жесты.
+  if (
+    Math.abs(deltaX) < SWIPE_THRESHOLD ||
+    Math.abs(deltaX) < Math.abs(deltaY) * 1.5
+  ) return;
+
+  // Свайп влево — следующий год.
+  if (deltaX < 0) {
+    goTo(currentIndex + 1);
+  } else {
+    // Свайп вправо — предыдущий год.
+    goTo(currentIndex - 1);
+  }
+}, { passive: true });
 
 
 // KEYBOARD
@@ -496,7 +523,6 @@ function openFromHash() {
     document.getElementById("slide-area").scrollTop = 0;
 
     render();
-    scrollToReader();
   }
 }
 
