@@ -585,6 +585,8 @@ html {
   .random-button { margin-left: 2px; font-size: 11px; }
   .timeline-container { margin-top: 14px; }
 
+  .timeline-tick-label {display: none;}
+
   .unit-header { margin-bottom: 14px; }
   .unit-author { font-size: 10px; }
   .unit-text { line-height: 1.7; }
@@ -593,6 +595,7 @@ html {
   .collection-details .essay-section-heading h2 { font-size: 25px; }
   .collection-contribute { margin-top: 38px; }
   .collection-contribute h3 { font-size: 21px; }
+
 }
 
 
