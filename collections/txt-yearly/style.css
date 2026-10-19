@@ -94,7 +94,7 @@ html {
 
   /* Высота интерфейса не зависит от padding родителя */
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
 
   min-height: 0;
 }
@@ -570,7 +570,7 @@ html {
   }
 
   .reader {
-    height: 100dvh;
+    height: 100svh;
     min-height: 0;
   }
 
