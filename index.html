@@ -77,6 +77,7 @@
 
       <nav class="nav" aria-label="Навигация">
         <a href="#projects">Проекты</a>
+        <a href="#collections">Коллекции</a>
         <a href="#contact">Контакты</a>
 
       </nav>
@@ -246,7 +247,7 @@
             <span class="dot">·</span>
 
             <a href="./text-dynamics/">
-              Демо ↗
+              Демо
             </a>
 
             <span class="dot">·</span>
@@ -256,7 +257,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub ↗
+              GitHub
             </a>
 
           </div>
@@ -339,7 +340,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Статья ↗
+              Статья
             </a>
 
             <span class="dot">·</span>
@@ -349,7 +350,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub ↗
+              GitHub
             </a>
 
           </div>
@@ -387,6 +388,49 @@
 
 
 
+        <section class="section" id="collections">
+
+      <div class="section-header">
+        КОЛЛЕКЦИИ
+      </div>
+
+      <div class="inventory-grid">
+
+
+        <article class="collection-card">
+
+          <a class="collection-card__link" href="./collections/txt-yearly/"
+          aria-label="Русская проза по годам — открыть коллекцию">
+
+            <div class="collection-card__visual">
+
+              <div class="collection-box">
+                <span class="collection-box__glyph">«»</span>
+              </div>
+
+            </div>
+
+            <span class="collection-card__title">
+              Отрывки из русской прозы по годам
+            </span>
+
+            <span
+              class="collection-card__count"
+              id="txt-yearly-count"
+            >
+              Коллекция пополняется
+            </span>
+
+          </a>
+
+        </article>
+
+
+
+      </div>
+
+    </section>
+
 
 
     <!-- ===================================================
@@ -413,7 +457,7 @@
       <div class="contact__links">
 
         <a href="mailto:dunenkov.evgeniy@gmail.com">
-          Gmail ↗
+          Gmail
         </a>
 
         <a
@@ -421,7 +465,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Telegram ↗
+          Telegram
         </a>
 
         <a
@@ -429,7 +473,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub ↗
+          GitHub
         </a>
 
       </div>
@@ -467,6 +511,36 @@
 
 
 </div>
+
+
+
+<script>
+(async function updateCollectionCount() {
+  const counter = document.getElementById("txt-yearly-count");
+  if (!counter) return;
+
+  try {
+    const response = await fetch("./collections/txt-yearly/texts.md");
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const content = await response.text();
+
+    const count = (
+      content.match(/^year:\s*\d+\s*$/gm) || []
+    ).length;
+
+    if (count > 0) {
+      counter.textContent = `${count} шт`;
+    }
+
+  } catch (error) {
+    console.warn("Не удалось загрузить количество фрагментов", error);
+  }
+})();
+</script>
 
 </body>
 </html>
