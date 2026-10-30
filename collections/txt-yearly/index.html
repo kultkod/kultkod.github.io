@@ -25,6 +25,11 @@
   <!-- SITE HEADER -->
 
   <header class="topbar">
+    <div id="site-header"></div>
+  </header>
+
+
+  <!-- <header class="topbar">
     <div class="topbar__row">
       <a class="brand" href="../../" aria-label="На главную">
         <span class="brand__name">kultkod</span>
@@ -35,7 +40,7 @@
     <div class="rule" aria-hidden="true"></div>
   </header>
 
-  
+   -->
 
   <main class="collection-main">
 
@@ -261,6 +266,12 @@
 </div>
 
 <script src="./app.js"></script>
-
+<script>
+fetch('/components/header.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('site-header').innerHTML = html;
+  });
+</script>
 </body>
 </html>

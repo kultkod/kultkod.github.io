@@ -133,9 +133,44 @@ a:hover {
 }
 
 .brand__name {
+  display: inline-flex;
+  align-items: baseline;
   font-family: var(--sans);
   font-weight: 600;
   letter-spacing: 0.01em;
+}
+
+.brand__expand {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand__char {
+  display: inline-block;
+  min-width: 0;       /* Важно для flex: позволяет сжиматься до нуля */
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: pre;
+  pointer-events: none;
+
+  /* Быстрая анимация для эффекта печати */
+  transition: 
+    max-width 90ms ease-out,
+    opacity 50ms ease-out;
+
+  /* ПРИ ОТВЕДЕНИИ МЫШИ (стирание назад):
+     Буквы исчезают справа налево (с последней до первой) */
+  transition-delay: calc((var(--total) - 1 - var(--i)) * 35ms);
+}
+
+/* ПРИ НАВЕДЕНИИ (допечатывание вперед):
+   Буквы появляются слева направо (с 0-й до последней) */
+.brand:hover .brand__char,
+.brand:focus-visible .brand__char {
+  max-width: 1.5ch;
+  opacity: 1;
+  transition-delay: calc(var(--i) * 50ms);
 }
 
 .nav a {

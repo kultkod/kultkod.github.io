@@ -46,21 +46,9 @@
   <div class="page">
 
     <!-- HEADER -->
-    <header class="topbar">
-
-      <div class="topbar__row">
-
-        <a class="brand" href="./" aria-label="На главную">
-          <span class="brand__name">kultkod</span>
-        </a>
-
-
-      </div>
-
-      <div class="rule" aria-hidden="true"></div>
-
-    </header>
-
+  <header class="topbar">
+    <div id="site-header"></div>
+  </header>
 
     <main id="content" class="essay">
 
@@ -620,6 +608,12 @@
     });
   }
 </script>
-
+<script>
+fetch('/components/header.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('site-header').innerHTML = html;
+  });
+</script>
 </body>
 </html>
